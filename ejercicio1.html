@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número de Fibonacci</title>
+</head>
+
+<body>
+    <script>
+        // Variable numeroDeElementos
+        var numeroDeElementos = 10; 
+
+        // Función para generar la serie Fibonacci
+        function fibonacci(numeroDeElementos) {
+            var serie = [0, 1];
+            for (var i = 2; i < numeroDeElementos; i++) {
+                var nuevoElemento = serie[i - 1] + serie[i - 2];
+                serie.push(nuevoElemento);
+            }
+            return serie;
+        }
+        // Imprimir la serie en la consola
+        console.log("Serie Fibonacci:");
+        var resultado = fibonacci(numeroDeElementos);
+        console.log(resultado);
+    </script>
+</body>
+</html>

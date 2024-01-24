@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenar Números</title>
+</head>
+
+<body>
+    <script>
+        // Arreglo de prueba
+        var inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+        // Función para ordenar solo los números en el arreglo
+        function ordenarNumeros(arr) {
+            // Filtrar solo los números del arreglo
+            var numeros = arr.filter(item => typeof item === 'number');
+            // Implementar un algoritmo de ordenación
+            for (var i = 0; i < numeros.length - 1; i++) {
+                for (var j = 0; j < numeros.length - i - 1; j++) {
+                    if (numeros[j] > numeros[j + 1]) {
+                        // Intercambiar elementos si están en el orden incorrecto
+                        var temp = numeros[j];
+                        numeros[j] = numeros[j + 1];
+                        numeros[j + 1] = temp;
+                    }
+                }
+            }
+            return numeros;
+        }
+        // Llamar a la función y mostrar el resultado en la consola
+        var numerosOrdenados = ordenarNumeros(inicio);
+        console.log(numerosOrdenados);
+    </script>
+</body>
+
+</html>
